@@ -1,2 +1,2 @@
- insertAtTail(head,30);
-    print(head);
+cout<<"deueue element:"<<dequeue(&q)<<endl;
+} 

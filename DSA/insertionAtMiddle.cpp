@@ -26,7 +26,31 @@ void insertAtPositon(Node* &head,int p,int d)
 {
      Node* temp = head;
      int cnt =1;
-     
+
+     if(p==1)
+     {
+        insertAtHead(head,d);
+        return;
+     }
+     Node *temp = head;
+     int cn = 1;
+     while(cn<p-1)
+     {
+          temp = temp->next;
+          cnt++;
+     }
+     //inserting at last
+     if(temp->next = NULL)
+     {
+        insertAtTail(tail,d);
+        return ;
+     }
+     //creating a node for d
+     Node * nodeToinsert = new Node(d);
+     nodeToinsert-> next = temp->next;
+     temp->next->prev = nodeToinsert;
+     temp->next = nodeToinsert;
+     nodeToinsert->prev =temp;
 }
 void print(Node* &head)
 {
